@@ -13,6 +13,15 @@ function App() {
   // traffic is complicated. It should be an array of strings that starts out as ['car', 'truck']
   const [traffic, setTraffic] = useState(['car', 'truck']);
 
+
+  function handleAlienZap() {
+    setLizardSize(lizardSize - 1);
+  }
+
+  function handleAlienEatsElectricity() {
+    setAlienSize(alienSize + 1);
+  }
+
   return (
     <div className="App">
       <div className="fight">
@@ -21,9 +30,9 @@ function App() {
           <img src="alien.png" width={20} />
           <div className='buttons'>
             {/* when you click this button, the alien's size in state should go up by one */}
-            <button>Oh no! The alien is gobblin up all the electricity!</button>
+            <button onClick={handleAlienEatsElectricity}>Oh no! The alien is gobblin up all the electricity!</button>
             {/* when you click this button, the lizard's size in state should go down by one */}
-            <button >Amazing! The alien zapped the lizard!</button>
+            <button onClick={handleAlienZap}>Amazing! The alien zapped the lizard!</button>
           </div>
         </div>
         <div className="monster">
@@ -31,9 +40,9 @@ function App() {
           <img src="lizard.png" width={20} />
           <div className="buttons">
             {/* when you click this button, the lizard's size in state should go up by one */}
-            <button>Yegads! The lizard is ramping up to its final form!</button>
+            <button onClick={() => setAlienSize(alienSize - 1)}>Yegads! The lizard is ramping up to its final form!</button>
             {/* when you click this button, the alien's size in state should go up by one */}
-            <button>Oh my! The lizard chomped down on the alien!</button>
+            <button onClick={() => setLizardSize(lizardSize + 1)}>Oh my! The lizard chomped down on the alien!</button>
           </div>
         </div>
       </div>
