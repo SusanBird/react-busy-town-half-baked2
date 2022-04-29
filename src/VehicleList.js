@@ -1,12 +1,12 @@
 import React from 'react';
 import Vehicle from './Vehicle';
 
-export default function VehicleList() {
-  const vehicles = ['car', 'bus', 'truck', 'motorcycle'];
+export default function VehicleList({ vehicles }) {
+  // const vehicles = ['car', 'bus', 'truck', 'motorcycle'];
   
   return (
     <div className="traffic">
-      {vehicles.map(vehicle => <Vehicle key={vehicle} vehicle={vehicle} />)}
+      {vehicles.map(vehicle => <Vehicle key={vehicle.index} vehicle={vehicle} />)}
     </div>
   );
 }
