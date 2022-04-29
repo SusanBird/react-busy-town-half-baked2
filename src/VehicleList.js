@@ -1,10 +1,8 @@
 import React from 'react';
 import Vehicle from './Vehicle';
-import { vehicles } from './App';
 
 export default function VehicleList() {
-  // const [vehicles, setVehicles] = useState(['car', 'truck']);
-
+  const vehicles = ['car', 'bus', 'truck', 'motorcycle'];
   
   return (
     <div className="traffic">
@@ -18,6 +16,3 @@ export default function VehicleList() {
 {/* map through the vehicles array in props */}
 {/* for each item render a Vehicle component. Pass the vehicle string as a prop called 
 vehicle to the Vehicle component.  */}
-
-
-///unsure if it is cool to import { vehicles } over from App.js - does that make data flow upstream?

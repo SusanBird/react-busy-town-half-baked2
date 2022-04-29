@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import './App.css';
 import VehicleList from './VehicleList';
 import TrafficLight from './TrafficLight';
@@ -52,6 +53,10 @@ function App() {
     setVehicles([...vehicles]);
   }
 
+  function handleLightColor() {
+    setLightColor(lightColor);
+  }
+
 
   return (
     <div className="App">
@@ -80,11 +85,11 @@ function App() {
       <TrafficLight color={lightColor} />
       <div className="buttons">
         {/* when you click this button, the color of the light in state should be set to 'red' */}
-        <button>Red</button>
+        <button onClick={handleLightColor}>Red</button>
         {/* when you click this button, the color of the light in state should be set to 'yellow' */}
-        <button>Yellow</button>
+        <button onClick={handleLightColor}>Yellow</button>
         {/* when you click this button, the color of the light in state should be set to 'green' */}
-        <button>Green</button>
+        <button onClick={handleLightColor}>Green</button>
       </div>
       {/* 
       the VehicleList component takes in one prop: vehicles.
@@ -109,6 +114,5 @@ function App() {
   );
 }
 
-export default App;
+export default App; 
 
-//added comment to deploy 

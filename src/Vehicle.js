@@ -4,8 +4,8 @@ export default function Vehicle({ vehicle }) {
   return (
     <div className="vehicle">
       {vehicle === 'car' && <span>🚗</span>}
-      {vehicle === 'truck' && <span>🚚'</span>}
-      {vehicle === 'bus' && <span>🚌'</span>}
+      {vehicle === 'truck' && <span>🚚</span>}
+      {vehicle === 'bus' && <span>🚌</span>}
       {vehicle === 'motorcycle' && <span>🏍️</span>}
     </div>
   );
